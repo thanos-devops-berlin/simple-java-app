@@ -15,7 +15,7 @@ pipeline {
         stage('Test') {
             steps {
                 //sh 'mvn test'
-                echo 'Test is executed'
+                echo 'Testing is executed'
             }
             post {
                 always {
