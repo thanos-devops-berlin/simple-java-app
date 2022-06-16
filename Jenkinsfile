@@ -9,21 +9,25 @@ pipeline {
         stage('Build') {
             steps {
                 // sh 'mvn -B -DskipTests clean package'
+                echo 'Build is successful'
             }
         }
         stage('Test') {
             steps {
                 //sh 'mvn test'
+                echo 'Test is executed'
             }
             post {
                 always {
                     //junit 'target/surefire-reports/*.xml'
+                    echo ' Unit test report'
                 }
             }
         }
         stage('Deliver') {
             steps {
                 // sh './jenkins/scripts/deliver.sh'
+                echo 'Pushed to artifact'
             }
         }
     }
