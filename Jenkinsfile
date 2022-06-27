@@ -10,7 +10,7 @@ pipeline {
             steps {
                 // sh 'mvn -B -DskipTests clean package'
                 // echo 'Build is successful'
-                sh 'mvn --version'
+                /bin/sh 'mvn --version'
             }
         }
         stage('Test') {
